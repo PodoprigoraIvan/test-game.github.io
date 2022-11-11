@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard leaderboard</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./scripts/leaderboard.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body onload="displayLeaderboard()">
+    <div id="leaderboarddiv">
+        <h1>ПОБЕДА</h1>
+        <button class="playAgainButton" onclick='window.location.href = "./main.html"' >Играть снова</button>
+        <button class="playAgainButton" onclick='window.location.href = "./index.html"' >Играть за нового пользователя</button>
+        <h2>Таблица лидеров:</h2>
+        <table id="leaderboardTable"></table>
+    </div>
+</body>
+</html>

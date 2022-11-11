@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./scripts/leaderboard.js"></script>
+    <script src="https://kit.fontawesome.com/c50584688c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id="title-and-input">
+        <h1 id="header">Маг демоноборец</h1>
+        <button onclick="document.getElementById('controls').showModal()">управление</button>
+        <button onclick="document.getElementById('info').showModal()">информация</button>
+        <form action="./main.html" id="form" onsubmit="storeUsername(this)">
+            <label>
+                Введите имя:<br>
+                <input placeholder="Имя пользователя" name = "username" required><br>
+            </label>
+            <input type="submit" value="НАЧАТЬ" autocomplete="off">
+        </form>
+    </div>
+    <dialog id="controls">
+        <h1>управление</h1>
+        <p>Движение - WASD, стрелки<br>
+            Использовать зелье лечения - 1<br>
+            Использовать зелье магии - 2<br>
+            Стрелять волшебными сферами - щелчок мыши в направлении стрельбы<br>
+            Заклинание остановки времени - пробел
+        </p>
+        <button class='close_button', type="button", onClick="this.closest('dialog').close()">
+            <i class="fa fa-solid fa-xmark" ></i>
+        </button>
+    </dialog>
+    <dialog id="info">
+        <h1>информация об игре</h1>
+        <p>На волшебную поляну пробрались злые демоны и только в ваших силах их остановить.
+            Возьмите на себя роль мага - защитника волшебной поляны и истребите демонов, засевших в руинах на волшебной поляне.
+            Постепенно продвигайтесь, уровень за уровнем, не оставляя в живых ни одного демона.
+            В вашем арсенале заклинание волшебных сфер и заклинание остановки времени, также на уровнях вас ждут бонусы - зелья здоровья и магии, которые можно использовать, чтобы пополнить соответствующую шкалу.
+            Будьте аккуратны - демоны раскидали повсюду капканы, которые могут ранить вас.<br>
+            <br>Собирайте монеты, чтобы увеличить свой игровой счет.
+        </p>
+        <button class='close_button', type="button", onClick="this.closest('dialog').close()">
+            <i class="fa fa-solid fa-xmark" ></i>
+        </button>
+    </dialog>
+</body>
+</html>
