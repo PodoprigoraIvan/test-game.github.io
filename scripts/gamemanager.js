@@ -91,7 +91,7 @@ class GameManager {
         let speed = 7;
         let speed_x = Math.abs(dx) / Math.sqrt(dx*dx + dy*dy) * speed;
         let speed_y = Math.abs(dy) / Math.sqrt(dx*dx + dy*dy) * speed;
-        let ball = new MagicBall("magic_ball", center_x+move_x*20, center_y+move_y*20, this, speed_x, speed_y, move_x, move_y);
+        let ball = new MagicBall("magic_ball", center_x, center_y, this, speed_x, speed_y, move_x, move_y);
         this.entities.push(ball);
         this.player.manaPoints -= this.player.magicBallSpellCost;
     }

@@ -88,7 +88,7 @@ class MagicBall extends MovingEntity {
         if (this.ricochetsCount > this.maxRicochets) this.kill();
     }
     onTouchEntity(entity){
-        //if (entity.constructor.name != "Demon" || entity.constructor.name != "player") return;
+        if (entity.constructor.name != "Demon") return;
         entity.getDamage(this.damage);
         this.kill();
     }
