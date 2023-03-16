@@ -1,2 +1,2 @@
-# test-game.github.io
+# wizard-game.github.io
 Game
